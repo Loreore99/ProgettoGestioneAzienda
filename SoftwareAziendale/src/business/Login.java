@@ -14,9 +14,8 @@ public class Login {
 	private static Logger log = Logger.getLogger("business");
 	
 	public static Boolean loginCliente(String username, String password) {
-		Boolean result = false;
-		
-		while(result == false) {
+		Boolean result = true;
+	
 			EntityManager em = EntityManagerProvider.getEntityManager();
 			Cliente c = em.find(Cliente.class, username);
 			if (c.getUsername().equals(username) == false ) {
@@ -33,14 +32,13 @@ public class Login {
 			}
 			
 			
-		}
-		return true;
+		return result;
 
 	}
 	
 	public static Boolean loginLavoratore(String username, String password) {
-		Boolean result = false;
-		while(result == false) {
+		Boolean result = true;
+
 			EntityManager em = EntityManagerProvider.getEntityManager();
 			Lavoratore l = em.find(Lavoratore.class, username);
 			if (l.getUsername().equals(username) == false ) {
@@ -55,16 +53,14 @@ public class Login {
 				log.info("login of " + username + ": not available");
 				result = false;
 			}
+			return result;
 			
-			
-		}
-		return true;
-
 		}
 	
+	
 	public static Boolean loginAzienda(String username, String password) {
-		Boolean result = false;
-		while(result == false) {
+		Boolean result = true;
+	
 			EntityManager em = EntityManagerProvider.getEntityManager();
 			Azienda a = em.find(Azienda.class, username);
 			if (a.getUsername().equals(username) == false ) {
@@ -80,9 +76,9 @@ public class Login {
 				result = false;
 			}
 			
+			return result;
 			
 		}
-		return true;
-			
-	}
+		
+	
 }

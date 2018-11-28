@@ -9,7 +9,7 @@ public class EntityManagerProvider {
 	
 	public static EntityManager getEntityManager() {
 		if (emf == null) {
-			emf = Persistence.createEntityManagerFactory("ecommerce");
+			emf = Persistence.createEntityManagerFactory("SoftwareAziendale");
 		}
 		return emf.createEntityManager();
 	}
