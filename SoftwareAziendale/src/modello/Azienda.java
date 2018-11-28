@@ -1,9 +1,11 @@
 package modello;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Azienda {
@@ -11,72 +13,83 @@ public class Azienda {
 	private String nome;
 	private String tipo;
 	private Double capitale;
-	@OneToOne (mappedBy = "id")
-	private Integer numLavoratori; // serve solo a sapere quanti sono i lavoratori
-	private String idLavoratore; // serve per l'associazione con lavoratore
 	
-	private Integer numClienti;// serve solo a sapere quanti sono i clienti
-	@OneToOne (mappedBy = "partitaIva") 
-	private String idCliente; // serve per l'associazione con cliente
-	
-	private Integer numProgetti;// serve solo a sapere quanti sono i progetti attivi
-	@OneToMany (mappedBy = "idAz") 
-	private String nomeProg; // serve per l'associazione con progetto
+	@OneToMany(mappedBy="azienda")
+	private List<Lavoratore> lavoratori; // serve per l'associazione con lavoratore
 	
 	
+	@ManyToMany(mappedBy="fornitori")
+	private List<Cliente> clienti; // serve per l'associazione con cliente
+	
+
+	@OneToMany(mappedBy="supervisore")
+	private List<Progetto> progettiSupervisionati;
+	
+	private String username;
+	private String password;
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getTipo() {
 		return tipo;
 	}
+
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
 	public Double getCapitale() {
 		return capitale;
 	}
+
 	public void setCapitale(Double capitale) {
 		this.capitale = capitale;
 	}
-	public Integer getNumLavoratori() {
-		return numLavoratori;
+
+	public List<Lavoratore> getLavoratori() {
+		return lavoratori;
 	}
-	public void setNumLavoratori(Integer numLavoratori) {
-		this.numLavoratori = numLavoratori;
+
+	public void setLavoratori(List<Lavoratore> lavoratori) {
+		this.lavoratori = lavoratori;
 	}
-	public String getIdLavoratore() {
-		return idLavoratore;
+
+	public List<Cliente> getClienti() {
+		return clienti;
 	}
-	public void setIdLavoratore(String idLavoratore) {
-		this.idLavoratore = idLavoratore;
+
+	public void setClienti(List<Cliente> clienti) {
+		this.clienti = clienti;
 	}
-	public Integer getNumClienti() {
-		return numClienti;
+
+	public List<Progetto> getProgettiSupervisionati() {
+		return progettiSupervisionati;
 	}
-	public void setNumClienti(Integer numClienti) {
-		this.numClienti = numClienti;
+
+	public void setProgettiSupervisionati(List<Progetto> progettiSupervisionati) {
+		this.progettiSupervisionati = progettiSupervisionati;
 	}
-	public String getIdCliente() {
-		return idCliente;
+
+	public String getUsername() {
+		return username;
 	}
-	public void setIdCliente(String idCliente) {
-		this.idCliente = idCliente;
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public Integer getNumProgetti() {
-		return numProgetti;
+
+	public String getPassword() {
+		return password;
 	}
-	public void setNumProgetti(Integer numProgetti) {
-		this.numProgetti = numProgetti;
-	}
-	public String getNomeProg() {
-		return nomeProg;
-	}
-	public void setNomeProg(String nomeProg) {
-		this.nomeProg = nomeProg;
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
