@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Lavoratore {
@@ -32,6 +33,17 @@ public class Lavoratore {
 	
 	private String username;
 	private String password;
+	
+	@OneToMany(mappedBy = "lav")
+	private List <RegistroOre> registri;
+	
+	public List<RegistroOre> getRegistri() {
+		return registri;
+	}
+
+	public void setRegistri(List<RegistroOre> registri) {
+		this.registri = registri;
+	}
 
 	public int getMatricola() {
 		return matricola;

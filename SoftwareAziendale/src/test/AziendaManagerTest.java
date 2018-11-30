@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.fail;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import org.junit.Test;
@@ -12,7 +13,7 @@ import modello.Azienda;
 public class AziendaManagerTest {
 
 	@Test
-	public void testAggiungiAzienda() {
+	public void testAggiungiAzienda() throws ClassNotFoundException, SQLException {
 		Azienda a = new Azienda();
 		setAzienda(a);
 		AziendaManager.aggiungiAzienda(a);

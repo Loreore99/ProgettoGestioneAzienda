@@ -14,6 +14,7 @@ public class EMTest {
 	public void test() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("SoftwareAziendale");
 		EntityManager em = emf.createEntityManager();
+		// creo fisicamente sul db le tabelle con le varie relazioni
 	}
 
 }

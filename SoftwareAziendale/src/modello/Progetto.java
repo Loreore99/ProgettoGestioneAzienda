@@ -26,6 +26,20 @@ public class Progetto {
 	@ManyToOne
 	private Azienda supervisore;
 
+	@OneToMany(mappedBy = "prog")
+	private List <RegistroOre> registri;
+	
+	
+	
+	
+	public List<RegistroOre> getRegistri() {
+		return registri;
+	}
+
+	public void setRegistri(List<RegistroOre> registri) {
+		this.registri = registri;
+	}
+
 	public String getNome() {
 		return nome;
 	}
