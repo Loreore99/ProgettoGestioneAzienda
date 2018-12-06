@@ -32,7 +32,7 @@ button {width: 100px;height: 25px;margin: 0 auto;align: center}
 </div>
 <div>
 <h5>Non sei ancora registrato?</h5>
-<input type="button" value="Registrati">
+<button name="nome" onclick="window.location.href='RegistrazioneAzienda.jsp'">Registrati</button>
 </div>
 </body>
 </html>
