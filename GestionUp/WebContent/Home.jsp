@@ -7,9 +7,7 @@
 <meta charset="ISO-8859-1">
 
 <title>GestionUp</title>
-<style>
 
-</style>
 </head>
 <body style="background-color:yellow">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

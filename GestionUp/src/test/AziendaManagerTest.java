@@ -23,10 +23,10 @@ public class AziendaManagerTest {
 	public void testRimuoviAzienda() {
 		Scanner sc = new Scanner(System.in);
 	   
-		Azienda a = new Azienda();
+		//Azienda a = new Azienda();
 		System.out.println("inserisci nome dell'azienda da rimuovere > " );
-		a.setNome(sc.nextLine());
-		AziendaManager.rimuoviAzienda(a);
+		//a.setNome(sc.nextLine());
+		AziendaManager.rimuoviAzienda(sc.nextLine());
 	}
 	
 

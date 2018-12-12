@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.AziendaManager;
-import modello.Azienda;
+import business.LavoratoreManager;
+import modello.Lavoratore;
 
 /**
- * Servlet implementation class IscrizioneAziendaServlet
+ * Servlet implementation class AssumiLavoratoreServlet
  */
-@WebServlet("/IscrizioneAziendaServlet")
-public class IscrizioneAziendaServlet extends HttpServlet {
+@WebServlet("/AssumiLavoratoreServlet")
+public class AssumiLavoratoreServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IscrizioneAziendaServlet() {
+    public AssumiLavoratoreServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,17 +32,18 @@ public class IscrizioneAziendaServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Azienda a = new Azienda();
-		a.setNome(request.getParameter("nome"));
-		a.setTipo(request.getParameter("tipo"));
-		a.setCapitale(Double.parseDouble(request.getParameter("capitale"))); 
-		a.setUsername(request.getParameter("username"));
-		a.setPassword(request.getParameter("password"));
-		a.setEmail(request.getParameter("email"));
+		Lavoratore l = new Lavoratore();
+	
+		l.setMatricola(Integer.parseInt(request.getParameter("matricola")));
+		l.setNome(request.getParameter("nome"));
+		l.setCognome(request.getParameter("cognome")); 
+		l.setCodiceFiscale(request.getParameter("codFiscale"));
+		l.setUsername(request.getParameter("username"));
+		l.setPassword(request.getParameter("password"));
 		
 			try {
-				AziendaManager.aggiungiAzienda(a);
-				response.sendRedirect(request.getContextPath()+"/DettagliInserimento.jsp"); // la servlet visualizza una pagina vuota. 
+				LavoratoreManager.aggiungiLavoratore(l);
+				response.sendRedirect(request.getContextPath()+"/DettagliInserimentoAzienda.jsp"); // la servlet visualizza una pagina vuota. 
 				//Questa istruzione serve per reindirizzare alla pagina precedente
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -53,7 +54,6 @@ public class IscrizioneAziendaServlet extends HttpServlet {
 				e.printStackTrace();
 				System.out.println(e.getMessage());
 			}
-	
 	}
 
 }

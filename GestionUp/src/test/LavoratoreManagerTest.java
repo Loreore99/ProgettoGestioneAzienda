@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.fail;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import org.junit.Test;
@@ -13,7 +14,7 @@ import modello.Lavoratore;
 public class LavoratoreManagerTest {
 
 	@Test
-	public void testAggiungiLavoratore() {
+	public void testAggiungiLavoratore() throws ClassNotFoundException, SQLException {
 		Lavoratore l = new Lavoratore();
 		setLavoratore(l);
 		LavoratoreManager.aggiungiLavoratore(l);

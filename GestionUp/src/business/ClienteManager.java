@@ -1,5 +1,7 @@
 package business;
 
+import java.sql.SQLException;
+
 import javax.persistence.EntityManager;
 
 import modello.Cliente;
@@ -7,17 +9,21 @@ import modello.Lavoratore;
 import utility.EntityManagerProvider;
 
 public class ClienteManager {
-	public static void aggiungiCliente(Cliente c ) {
+	public static boolean aggiungiCliente(Cliente c )  throws ClassNotFoundException, SQLException{
+		boolean result = false; // per il feedback all'utente
 		EntityManager em = EntityManagerProvider.getEntityManager();
-		Cliente db = em.find(Cliente.class, c.getPartitaIva());
+		Cliente db = em.find(Cliente.class, c.getUsername());
 		if(db == null){
 			em.getTransaction().begin();
 			em.persist(c);
 			em.getTransaction().commit();
 			System.out.println("ho aggiunto il cliente");
+			result = true;
 		}
 		else
 			System.out.println("questo cliente è già presente");
+		
+		return result;
 		
 	}
 	

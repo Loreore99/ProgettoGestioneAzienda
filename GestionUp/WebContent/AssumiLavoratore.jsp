@@ -14,10 +14,11 @@
 
 </head>
 <body>
-<form class = "centrato" method="post">
+<form action="/GestionUp/AssumiLavoratoreServlet" class = "centrato" method="post">
+<br><br><br>
 	<h1> Inserisci i dati del nuovo dipendente</h1>
 	<label>Inserisci matricola</label>
-	<input type="number" name="matricola">
+	<input type="text" name="matricola">
 	<br><br>
 	<label>Inserisci nome </label>
 	<input type="text" name="nome">
@@ -32,7 +33,8 @@
 	<input type="text" name="username">
 	<br><br>
 	<label>Dai una password al dipendente</label>
-	<input type="text" name="password">
+	<input type="password" name="password">
+	<br><br>
 	<input type="submit" value="Conferma dipendente">
 	</form>
 </body>

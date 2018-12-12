@@ -23,24 +23,17 @@ public class AziendaManager {
 	public static boolean aggiungiAzienda(Azienda a ) throws ClassNotFoundException, SQLException {
 		boolean result = false; // per il feedback all'utente
 		EntityManager em = EntityManagerProvider.getEntityManager();
+
+	/*	int numAziende = em.createNativeQuery("select count(a) from Azienda a", Integer.class).getFirstResult();
 		
-		log.info("AziendaManager aggiungiAzienda fuori if " + a.getUsername());
-
-		int numAziende = em.createNativeQuery("select count(a) from Azienda a", Integer.class).getFirstResult();
-		log.info("AziendaManager aggiungiAzienda count " + numAziende);
-
 		if(numAziende == 0){ // se nella tabella non c'è niente creo un nuovo arrayList
 			List<Azienda> fornitori = new ArrayList <>();
-			log.info("AziendaManager aggiungiAzienda creaLista ");
-		}
+		}*/
 			
-	//	Cliente c = new Cliente();
 		Azienda db = em.find(Azienda.class, a.getNome());
 		if (db == null) {
-			log.info("AziendaManager aggiungiAzienda dbAzienda is null ");
 			em.getTransaction().begin();
 			em.persist(a);
-		//	c.getFornitori().add(a);
 			em.getTransaction().commit();
 			System.out.println("ho aggiunto l'azienda "+a.getNome());
 			result = true;
@@ -48,25 +41,29 @@ public class AziendaManager {
 		}
 		else {
 			System.out.println("l'azienda "+a.getNome()+" è già presente");
-			log.info("AziendaManager aggiungiAzienda dbAzienda nome =  " + a.getNome());
-
 		}
 	
 		return result;
 	}
+	
+	
 	// metodo che viene richiamato quando un'azienda vuole smettere di utilizzare l'applicazione
-	public static void rimuoviAzienda(Azienda a ) {
+	public static boolean rimuoviAzienda(String username ) {
+		boolean result = false;
 		EntityManager em = EntityManagerProvider.getEntityManager();
-		Azienda db = em.find(Azienda.class, a.getNome());
+		Azienda db = em.find(Azienda.class, username);
 		if (db != null) {
 			em.getTransaction().begin();
 			em.remove(db);
 			em.getTransaction().commit();
 			System.out.println("ho rimosso questa azienda");
 			//fornitori.remove(a);
+			result = true;
 		}
 		else
 			System.out.println("il nome di questa azienda non è stato trovato");
+		
+		return result;
 	}
 	
 	
