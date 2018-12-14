@@ -15,9 +15,9 @@ width: 100%;
 }
 </style>
 <meta charset="ISO-8859-1">
-<title>Info azienda</title>
+<title>Modifica profilo</title>
 </head>
-<body background="sfondo.PNG">
-<h2> Info azienda</h2>
+<body background="sfondo.PNG" >
+<h5> Il mio account</h5>
 </body>
 </html>

@@ -9,13 +9,22 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <title>Login Azienda</title>
 <style>
+body{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: contain;
+position: absolute;
+height: 100%;
+width: 100%;
+}
 .centrato{
 	text-align:center;
 	font-family: arial;
 }
 </style>
 </head>
-<body>
+<body background="sfondo.PNG">
 <br><br><br><br>
 <form class = "centrato" method="post">
 	<h1> Login azienda</h1>
@@ -30,7 +39,7 @@
      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   
-  </div>
+  
   <button type="submit" class="btn btn-primary" value="Accedi">Accedi</button>
 	<br><br>		
 												<!-- non è vero che la stringa vuota mi permetta di loggarmi --> 
@@ -45,10 +54,10 @@
 	  <br><br>
 </form>
 
-<p class = "centrato"> Non sei ancora iscritto? Clicca su iscriviti   </p>
+<h3 class = "centrato"> Non sei ancora iscritto? Clicca su iscriviti   </h3>
 
 <p class = "centrato">
-<input type="button"  value="Iscriviti" onclick="location.href='IscrizioneAzienda.jsp';" />
+<input type="button"  class ="btn btn-primary" value="Iscriviti" onclick="location.href='IscrizioneAzienda.jsp';" />
 </p>
 
 

@@ -28,19 +28,19 @@ public class LavoratoreManager {
 		
 	}
 	
-	public static boolean rimuoviLavoratore(Lavoratore l ) {
+	public static boolean rimuoviLavoratore(String username) {
 		boolean result = false;
 		EntityManager em = EntityManagerProvider.getEntityManager();
-		Lavoratore db = em.find(Lavoratore.class, l.getUsername());
+		Lavoratore db = em.find(Lavoratore.class, username);
 		if (db != null) {
 			em.getTransaction().begin();
 			em.remove(db);
 			em.getTransaction().commit();
-			System.out.println("ho rimosso questo lavoratore");
+			System.out.println("ho rimosso il lavoratore con username "+db.getUsername());
 			result = true;
 		}
 		else
-			System.out.println("la matricola non è stata trovata");
+			System.out.println("questo lavoratore non è stato trovato");
 		
 		return result;
 	

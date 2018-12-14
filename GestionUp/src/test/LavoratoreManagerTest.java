@@ -27,7 +27,7 @@ public class LavoratoreManagerTest {
 		Lavoratore l = new Lavoratore();
 		System.out.println("inserisci matricola del lavoratore da rimuovere > " );
 		l.setMatricola(sc.nextInt());
-		LavoratoreManager.rimuoviLavoratore(l);
+		LavoratoreManager.rimuoviLavoratore(sc.nextLine());
 	}
 	
 	public static void setLavoratore (Lavoratore l){

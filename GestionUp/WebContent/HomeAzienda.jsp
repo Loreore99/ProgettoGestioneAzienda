@@ -4,6 +4,15 @@
 <html>
 <head>
 <style>
+body{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: contain;
+position: absolute;
+height: 100%;
+width: 100%;
+}
 .centrato {
 	text-align: center;
 	font-family: arial;
@@ -21,10 +30,9 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 </head>
-<body>
+<body background="sfondo.PNG">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand">Navbar</a>
-		<!-- qui al posto della parola navbar ci va il logo del progetto -->
+		<a class="navbar-brand"><img src = "sfondo.PNG" height="50px" width="85px"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,9 +43,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					href="http://localhost:8080/GestionUp/HomeAzienda.jsp">Home <span
-						class="sr-only">(current)</span></a></li>
+				<li class="nav-item active"><a class="nav-link">Home</a></li>
 
 				<li class="nav-item"><a class="nav-link dropdown-toggle"
 					href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -55,8 +61,9 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Progetti </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Progetti in attesa</a> <a
-							class="dropdown-item" href="#">Progetti attivi</a>
+						<a class="dropdown-item" href="#">Progetti in attesa</a> 
+						<a class="dropdown-item" href="#">Progetti attivi</a>
+						<a class="dropdown-item" href="#">Visualizza andamento del progetto</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>
@@ -67,7 +74,7 @@
 					aria-expanded="false"> Info profilo </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="http://localhost:8080/GestionUp/EliminaProfilo.jsp">Elimina profilo</a> <a
-							class="dropdown-item" href="#">Modifica dati personali</a>
+							class="dropdown-item" href="http://localhost:8080/GestionUp/ModificaProfilo.jsp">Modifica dati personali</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>
