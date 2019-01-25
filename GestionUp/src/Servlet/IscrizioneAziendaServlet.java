@@ -42,7 +42,7 @@ public class IscrizioneAziendaServlet extends HttpServlet {
 		
 			try {
 				AziendaManager.aggiungiAzienda(a);
-				response.sendRedirect(request.getContextPath()+"/DettagliInserimento.jsp"); // la servlet visualizza una pagina vuota. 
+				response.sendRedirect(request.getContextPath()+"/DettagliInserimentoAzienda.jsp"); // la servlet visualizza una pagina vuota. 
 				//Questa istruzione serve per reindirizzare alla pagina precedente
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block

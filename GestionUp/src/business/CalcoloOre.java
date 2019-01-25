@@ -13,7 +13,7 @@ public class CalcoloOre {
 		
 		float somma = 0;
 		for (RegistroOre reg : db.getRegistri()) {
-			somma += reg.getOraFine() - reg.getOraInizio();
+			//somma += reg.getOraFine() - reg.getOraInizio();
 		}
 		return somma;
 	}

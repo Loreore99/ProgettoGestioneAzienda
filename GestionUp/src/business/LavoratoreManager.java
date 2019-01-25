@@ -27,7 +27,7 @@ public class LavoratoreManager {
 		return result;
 		
 	}
-	
+	// questo metodo viene richiamato quando un'azienda vuole licenziare un dipendente
 	public static boolean rimuoviLavoratore(String username) {
 		boolean result = false;
 		EntityManager em = EntityManagerProvider.getEntityManager();

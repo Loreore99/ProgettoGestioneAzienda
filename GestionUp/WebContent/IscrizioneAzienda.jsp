@@ -7,35 +7,60 @@
 <meta charset="ISO-8859-1">
 <title>Iscrizione Azienda</title>
 <style>
-.centrato{
-	text-align:center;
+body{
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: contain;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+.centrato {
+	text-align: center;
 	font-family: arial;
 }
 
+.btn-logout {
+	margin-left: 15px;
+	color: white!important;
+}
 </style>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
 </head>
-<body>
-<form action="/GestionUp/IscrizioneAziendaServlet" class = "centrato" method="post">
+<body background="sfondo.PNG">
+<form action="/GestionUp/IscrizioneAziendaServlet" class = "centrato" method="post"><br>
 	<h1> Iscrizione azienda</h1>
-	<label>Inserisci il nome dell'azienda </label>
-	<input type="text" name="nome">
-	<br><br>
-	<label>Inserisci il tipo di azienda </label>
-	<input type="text" name="tipo">
-	<br><br>
-	<label>Inserisci il capitale dell'azienda </label>
-	<input type="text" name="capitale">
-	<br><br><br>
-	<label>Inserisci username per il profilo </label>
-	<input type="text" name="username">
-	<br><br>
-	<label>Inserisci password </label>
-	<input type="password" name="password">
-	<br><br>
-	<label>Inserisci e-mail  </label>
-	<input type="text" name="email">
-	<br><br>
-	<input type="submit" value="Invia dati">
+	
+  <div class="form-group">
+    <label for="formGroupExampleInput">Nome azienda</label>
+    <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci nome" name="nome" >
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Tipo azienda</label>
+    <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci tipo di azienda" name="tipo">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Capitale azienda</label>
+    <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci capitale azienda" name="capitale">
+  </div>
+  <br><br>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Imposta username per il profilo</label>
+    <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci username" name="username">
+  </div>
+   <div class="form-group">
+    <label for="formGroupExampleInput">Imposta password</label>
+    <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci password" name="password">
+  </div>
+	 <div class="form-group">
+    <label for="formGroupExampleInput">Inserisci l'email</label>
+    <input type="email" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci email" name="email">
+  </div>
+	<input type="submit"  class ="btn btn-primary" value="Invia dati"/>
 	
 	</form>
 

@@ -27,7 +27,7 @@ public class ClienteManagerTest {
 		Cliente c = new Cliente();
 		System.out.println("inserisci partita Iva del cliente da rimuovere > " );
 		c.setPartitaIva(sc.nextLine());
-		ClienteManager.rimuoviCliente(c);
+		ClienteManager.rimuoviCliente(c.getUsername());
 	}
 
 	public static void setCliente (Cliente c){

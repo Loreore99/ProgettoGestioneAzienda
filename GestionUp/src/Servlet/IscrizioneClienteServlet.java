@@ -45,7 +45,7 @@ public class IscrizioneClienteServlet extends HttpServlet {
 			
 		try {
 			ClienteManager.aggiungiCliente(c);
-			response.sendRedirect(request.getContextPath()+"/DettagliInserimento.jsp"); // la servlet visualizza una pagina vuota. 
+			response.sendRedirect(request.getContextPath()+"/DettagliInserimentoCliente.jsp"); // la servlet visualizza una pagina vuota. 
 			//Questa istruzione serve per reindirizzare alla pagina precedente
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

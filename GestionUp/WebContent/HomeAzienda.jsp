@@ -61,9 +61,10 @@ width: 100%;
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Progetti </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Progetti in attesa</a> 
+						<a class="dropdown-item" href="http://localhost:8080/GestionUp/ProgettiInAttesa.jsp">Progetti in attesa</a> 
 						<a class="dropdown-item" href="#">Progetti attivi</a>
 						<a class="dropdown-item" href="#">Visualizza andamento del progetto</a>
+						<a class="dropdown-item" href="#">Assegna progetto</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>

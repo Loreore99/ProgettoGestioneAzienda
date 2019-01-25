@@ -1,8 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+		function startTime()
+		{
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+		// add a zero in front of numbers<10
+		
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+		t=setTimeout('startTime()',500);
+		}
+		function checkTime(i)
+		{
+		if (i<10)
+		{
+		i="0" + i;
+		}
+		return i;
+		}
+		
+		</script>
 <style>
 body{
 background-repeat: no-repeat;
@@ -30,7 +55,7 @@ width: 100%;
 <meta charset="ISO-8859-1">
 <title>Home</title>
 </head>
-<body background="sfondo.PNG">
+<body background="sfondo.PNG" onload="startTime()">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand"><img src = "sfondo.PNG" height="50px" width="85px"></a>
@@ -50,10 +75,10 @@ width: 100%;
 					href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Info ore lavorative </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="http://localhost:8080/GestionUp/AssumiLavoratore.jsp">Visualizza ore lavorate</a>
-					    <a class="dropdown-item" href="http://localhost:8080/GestionUp/LicenziaLavoratore.jsp">Visualizza permessi</a> 
+						<a class="dropdown-item" href="#">Visualizza ore lavorate</a>
+					    <a class="dropdown-item" href="#">Visualizza permessi</a> 
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
+						<a class="dropdown-item" href="#">Visualizza ferie</a>
 					</div></li>
 
 				<li class="nav-item dropdown"><a
@@ -61,10 +86,8 @@ width: 100%;
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Richieste dai clienti </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="">Visualizza richieste</a> <a
+						<a class="dropdown-item" href="VisualizzaRichieste.jsp">Visualizza richieste</a> <a
 							class="dropdown-item" href="">Visualizza dati cliente</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>
 				
 				
@@ -88,12 +111,10 @@ width: 100%;
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="http://localhost:8080/GestionUp/EliminaProfilo.jsp">Elimina profilo</a> <a
 							class="dropdown-item" href="http://localhost:8080/GestionUp/ModificaProfilo.jsp">Modifica dati personali</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
 					</div></li>
 
 				<li class="nav-item active"><a class="nav-link"
-					href="http://localhost:8080/GestionUp/InfoAzienda.jsp">Info
+					href="#">Info
 						lavoratore <span class="sr-only">(current)</span>
 				</a></li>
 			</ul>
@@ -119,7 +140,37 @@ width: 100%;
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
-</body>
+		<br><br>
+		
+		<!-- form di inizio lavoro -->
+		<form class = "centrato" method="get"  action="inizio">
+		<h8> Inserisci il tuo username e clicca su "Inizio lavoro" per iniziare a lavorare</h8>
+		<br>
+		<input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci username" name="username" >
+		 <button type="submit" id = "bottone" class="btn btn-primary" value="OraInizio"  >Inizio lavoro</button>
+		 </form>
+		 
+		 
+		 <br><br>
+		 <!-- form di fine lavoro -->
+		 <form class = "centrato" method="get"  action="fine">
+		<h8> Inserisci il tuo username e clicca su "Fine lavoro" per finire di lavorare    </h8>
+		<br>
+		<input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci username" name="username" >
+		  <button type="submit" id = "bottone" class="btn btn-primary" value="OraFine" >Fine lavoro</button>
+		  <br><br><br>
+		</form>
+		
+		
+		<p class = "centrato"> Ore correnti: </p>
+		  <p class = "centrato" id="txt"></p>
+		
+	
+	
+	
+
+		
+		
 
 </body>
 </html>

@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import javax.persistence.EntityManager;
 
+import modello.Azienda;
 import modello.Cliente;
 import modello.Lavoratore;
 import utility.EntityManagerProvider;
@@ -27,7 +28,7 @@ public class ClienteManager {
 		
 	}
 	
-	public static void rimuoviCliente(Cliente c ) {
+/*	public static void rimuoviCliente(Cliente c ) {
 		EntityManager em = EntityManagerProvider.getEntityManager();
 		Cliente db = em.find(Cliente.class, c.getPartitaIva());
 		if (db != null) {
@@ -39,5 +40,22 @@ public class ClienteManager {
 		else
 			System.out.println("il cliente con partita Iva " +c.getPartitaIva()+ " non è presente");
 	
+	}*/
+	public static boolean rimuoviCliente(String username ) {
+		boolean result = false;
+		EntityManager em = EntityManagerProvider.getEntityManager();
+		Cliente db = em.find(Cliente.class, username);
+		if (db != null) {
+			em.getTransaction().begin();
+			em.remove(db);
+			em.getTransaction().commit();
+			System.out.println("ho rimosso questo cliente");
+			//fornitori.remove(a);
+			result = true;
+		}
+		else
+			System.out.println("il nome di questo cliente non è stato trovato");
+		
+		return result;
 	}
 }

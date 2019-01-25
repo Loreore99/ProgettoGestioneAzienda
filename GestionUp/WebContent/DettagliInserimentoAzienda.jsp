@@ -18,6 +18,6 @@
 <p> Qui dentro inserire tutti i dettagli della registrazione</p>
 <%  %>
 <br><br><br><br><br><br><br>
-<input type="button" align = "center" class="btn btn-primary btn-lg" value="Torna a Login" onclick="location.href='HomeAzienda.jsp';" />
+<input type="button" align = "center" class="btn btn-primary btn-lg" value="Torna a Login" onclick="location.href='LoginAzienda.jsp';" />
 </body>
 </html>

@@ -15,9 +15,10 @@ public class RegistroOre {
 	
 	@ManyToOne
 	Progetto prog;
-	
-	Float oraInizio;
-	Float oraFine;
+	@Temporal(TemporalType.TIMESTAMP)
+	Date oraInizio;
+	@Temporal(TemporalType.TIMESTAMP)
+	Date oraFine;
 	@Id
 	@Temporal(TemporalType.TIMESTAMP)
 	Date data;
@@ -36,16 +37,16 @@ public class RegistroOre {
 	public void setProg(Progetto prog) {
 		this.prog = prog;
 	}
-	public Float getOraInizio() {
+	public Date getOraInizio() {
 		return oraInizio;
 	}
-	public void setOraInizio(Float oraInizio) {
+	public void setOraInizio(Date oraInizio) {
 		this.oraInizio = oraInizio;
 	}
-	public Float getOraFine() {
+	public Date getOraFine() {
 		return oraFine;
 	}
-	public void setOraFine(Float oraFine) {
+	public void setOraFine(Date oraFine) {
 		this.oraFine = oraFine;
 	}
 	public Date getData() {

@@ -26,7 +26,7 @@ width: 100%;
 
 <body background="sfondo.PNG">
 <br><br><br><br>
-<form class = "centrato" method="post">
+<form class = "centrato" method="post"  action="login">
 	<h1> Login lavoratore</h1>
 	 <div class="form-group">
     <label for="formGroupExampleInput">Username</label>
@@ -35,7 +35,7 @@ width: 100%;
   <div class="form-group">
     <label for="formGroupExampleInput2">Password</label>
     <input type="password" style="width: 300px; class="form-control" id="formGroupExampleInput2" placeholder="Inserisci password" name="password">
-     <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+     <small class="form-text text-muted">We'll never share your email or password with anyone else.</small>
   </div>
   
   </div>
@@ -43,10 +43,7 @@ width: 100%;
 	<br><br>		
 														<!-- non è vero che la stringa vuota mi permetta di loggarmi --> 
 	 <% if (request.getParameter("username") != null && !"".equals(request.getParameter("username"))) { 
-		 if (Login.loginLavoratore(request.getParameter("username"), request.getParameter("password")) == true) { %>
-		 	<a href ="HomeLavoratore.jsp"> Dati corretti, puoi effettuare l'accesso </a> 
-
-		<%} else {%>
+		 if (request.getAttribute("esito") == null || !((boolean)request.getAttribute("esito"))) { %>
 			<p> I dati che hai inserito sono errati </p> 
 		<% } 
 	  }%>

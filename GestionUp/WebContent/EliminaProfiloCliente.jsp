@@ -25,13 +25,14 @@ width: 100%;
 <body background="sfondo.PNG">
 <br><br>
 <h3 class ="centrato"> Vuoi eliminare il tuo profilo dall'applicazione? Se si inserisci il tuo username e clicca su Disiscriviti</h3><br>
-<form action ="/GestionUp/DisiscrizioneAziendaServlet" class = "centrato" method="post">
+<form action ="/GestionUp/DisiscrizioneClienteServlet" class = "centrato" method="post">
 	 <div class="form-group">
     <label for="formGroupExampleInput"></label>
     <input type="text" style="width: 300px; class="form-control" id="formGroupExampleInput" placeholder="Inserisci username" name="username" >
   </div>
  
 <button type="submit" class="btn btn-primary" value="disiscriviti">Disiscriviti</button>
-
+<br><br>
+<a class="btn btn-secondary" href= "HomeCliente.jsp">Home</button>
 </body>
 </html>

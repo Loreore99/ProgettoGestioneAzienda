@@ -51,9 +51,9 @@ width: 100%;
 					href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"> Azioni progetto </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Richiedi progetto</a>
+						<a class="dropdown-item" href="RichiediProgetto.jsp">Richiedi progetto</a>
+						<a class="dropdown-item" href="StatoProgetto.jsp">Visualizza stato del progetto</a>
 					    <a class="dropdown-item" href="#">Visualizza andamento progetto</a> 
-					    <a class="dropdown-item" href="#">Visualizza stato del progetto</a>
 					    <a class="dropdown-item" href="#">Dai feedback al lavoratore</a>	    
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Chat con il dipendente</a>	
@@ -65,7 +65,7 @@ width: 100%;
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Info profilo </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Elimina profilo</a> <a
+						<a class="dropdown-item" href="EliminaProfiloCliente.jsp">Elimina profilo</a> <a
 							class="dropdown-item" href="#">Modifica dati personali</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">Something else here</a>

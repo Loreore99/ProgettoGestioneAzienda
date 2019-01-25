@@ -12,8 +12,9 @@ import javax.persistence.OneToMany;
 public class Progetto {
 	@Id
 	private String nome;
-	private String andamento;
-	
+	private String andamento; // sarà il nostro stato --> attivo/in pausa/archiviato/ pagato /da approvare
+	//private Date DataInizio;
+	//private Date DataFine;
 	@ManyToMany(mappedBy = "progetti")
 	private List<Lavoratore> team;
 	
