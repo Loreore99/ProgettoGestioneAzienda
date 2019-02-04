@@ -67,7 +67,7 @@ width: 100%;
 	 .done(progetti => {
 		console.log(progetti); 
 		progetti.forEach(p => {
-			$('#listaProgetti').append('<li>' + p.nome + ': <strong>' + p.andamento + '</strong>'+ ' richiesto da --> '+ p.cliente + '</li>');
+			$('#listaProgetti').append('<li>' + p.nome + ': <strong>' + p.andamento + '</strong>'+ ' richiesto da --&gt; '+ p.cliente.username + '</li>');
 		});
 	 });
  }
@@ -81,7 +81,7 @@ width: 100%;
 	 .done(progetti => { 
 		console.log(progetti); 
 		progetti.forEach(p => {
-			$('#listaApprovati').append('<li>' + p.nome + ': <strong>' + p.andamento + '</strong>'+ ' richiesto da --> '+ p.cliente + '</li>');
+			$('#listaApprovati').append('<li>' + p.nome + ': <strong>' + p.andamento + '</strong>'+ ' richiesto da --&gt; '+ p.cliente.username + '</li>');
 		});
 	 });
  }

@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+.body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 150px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    transform: translateY(-25px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2 ;
+
+}
+
+.logo{
+    padding-top: 10px;
+}
+.logo img {
+    height: 100px;
+    width: 230px;
+}  
+
+.login button {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 18px;
+    padding-top: 15px;
+    background-color: white;
+    border: none;
+}  
+
+.login img {
+    height: 110px;
+    width: 100px;
+}  
+.login img:hover {
+    height: 120px;
+    width: 110px;
+
+}  
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding-top: 100px;
+    align-items: flex-start;
+
+}
+
+.nav-links li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #070f0e;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.nav-links a:hover{
+    color: #7fffbb;
+    font-size: 18px;
+
+}
+.nav-links a:active{
+    color: #7fffbb;
+    font-size: 18px;
+
+}
+
+  
+.burger{
+    display: none;
+    cursor: pointer;
+    
+}
+
+.burger div{
+width: 25px;
+height: 3px;
+background-color: #070f0e;
+margin: 5px;
+transition: all 0.3s ease ;
+}
+
+.home{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: #070f0e;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+}
+.utenti{
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #8de8d5;
+    padding: 50px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+
+}
+
+.utenti div{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.utenti h1{
+    font-weight: bold;
+    letter-spacing: 6px;
+    font-size: 23px;
+}
+
+.sito{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: #d7e0de;
+    padding: 50px;
+    align-items: center;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+}
+
+.sito div{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    width: 600px;
+    height: 450px;
+    align-items: center;
+    text-align: left;
+
+}
+
+.sito img{
+    width:572px;
+   height:408px;
+   padding: 20px;
+   padding-top: 20px;
+
+}
+
+
+.color{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 130px;
+    
+    padding: 50px;
+    align-items: center;
+   
+}
+.color1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    padding: 50px;
+    align-items: center;
+  
+}
+.color2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    padding: 50px;
+    align-items: center;
+    width: 100%;
+   
+}
+.color3{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    padding: 50px;
+    align-items: center;
+   
+}
+
+
+.utenti2{
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #8de8d5;
+    padding: 50px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+
+}
+.utenti2 div{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.colonne {
+    flex-direction: row ;
+    display: flex;
+    justify-content: center;
+}
+
+.colonne div{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+    flex-direction: row ;
+    
+
+}
+
+.utenti2 h1{
+    font-weight: bold;
+    letter-spacing: 6px;
+    font-size: 23px;
+}
+
+.appicon{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    align-items: center;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+
+}
+
+
+
+.appicon img{
+    width: 150px;
+    height: 150px;
+}
+.app{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: #d7e0de;
+    padding: 50px;
+
+}
+
+.app div{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    width: 600px;
+    height: 550px;
+    align-items: center;
+    text-align: right;
+
+}
+.app h2{
+    font-size: 20px;
+    padding-top: 20px;
+}
+.app h1{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.app img{
+    width:580px;
+   height:507px;
+   
+
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: #070f0e;
+
+}
+
+.logoabb{
+    display: none;
+         
+}
+
+@media screen and (max-width: 1230px){
+    .utenti{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sito{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sito div{
+        
+        text-align: center;
+    
+    }
+    .utenti2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .colonne {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .app{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .app div{
+        
+        text-align: center;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 1124px) {
+    
+    body{
+         overflow-x: hidden;
+    }
+    .nav{
+        background-color: bisque;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 400px;
+        top: 150px;
+        background-color:#070f0e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in; 
+        padding-top:0px;
+        z-index: -1 ;
+        
+        
+    }
+    
+
+    .nav-links li{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .nav-links a{
+        color:white;
+    }
+
+    .burger{
+        display: block;
+             
+    }
+    .logoabb{
+        display: block;
+        
+       
+    } 
+
+    .logo img{
+        width: 70px;
+        height: 70px; 
+    } 
+
+    .logoa  {
+        display: none;
+        
+    }  
+   
+}
+
+.nav-active{
+    transform: translateY(0%)
+}
+.header-active{
+    transform: translateY(0%)
+}
+
+@keyframes navFade {
+    from {
+        
+        opacity: 0;
+        transform: translateY(-25px);
+
+    }
+
+    to{
+        
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        color: white;
+        opacity: 0;
+        transform: translateY(-100px);
+
+    }
+
+    to{
+        color: white;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.toggle .line1 {
+     transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+    
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 200px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 700px; /* Could be more or less, depending on screen size */
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgcontainer {
+      display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgcontainer img{
+    width: 60%;
+    height: 60%;
+    align-items: center;
+  }
+   .container{
+       background-color: #d7e0de;
+       flex-direction: column;
+       display: flex;
+       justify-content: center;
+       width: 100%;
+       height: 400px;
+       align-items: center;
+       font-family: 'Poppins', sans-serif;
+
+   }
+
+   .container1{
+    background-color: #d7e0de;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+
+}
+.container1 span,
+.container1 label {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 5px;
+
+
+}
+
+.container1 input {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.container1 button {
+    font-size: 20px;
+    padding: 5px;
+    background-color: #8de8d5;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.container1 div {
+    padding-top: 10px;
+}
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+
+
+
+

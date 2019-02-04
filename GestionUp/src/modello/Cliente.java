@@ -3,9 +3,10 @@ package modello;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Cliente extends Utenza {
@@ -19,6 +20,7 @@ public class Cliente extends Utenza {
 	@ManyToMany
 	private List<Azienda> fornitori;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="cliente")
 	private List<Progetto> progetti;
 

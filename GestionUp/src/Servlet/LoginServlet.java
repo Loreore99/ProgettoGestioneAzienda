@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
 			}
 		} else {
 			request.setAttribute("esito", false);
-			response.sendRedirect(request.getRequestURI());
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 	}
 

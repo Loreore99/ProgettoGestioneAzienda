@@ -2,6 +2,7 @@ package modello;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -10,7 +11,7 @@ import javax.persistence.TemporalType;
 @Entity
 public class RegistroOre {
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	Lavoratore lav;
 	
 	@ManyToOne

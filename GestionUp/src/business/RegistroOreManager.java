@@ -53,8 +53,9 @@ public class RegistroOreManager {
 		registro.setOraFine(data);
 		
 		EntityManager em = EntityManagerProvider.getEntityManager();
+		RegistroOre ro = em.find(RegistroOre.class, registro.getData());
 		em.getTransaction().begin();
-		em.persist(registro);
+		ro.setOraFine(data);
 		em.getTransaction().commit();
 	}
 }

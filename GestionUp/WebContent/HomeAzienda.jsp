@@ -43,7 +43,7 @@ width: 100%;
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link">Home</a></li>
+			
 
 				<li class="nav-item"><a class="nav-link dropdown-toggle"
 					href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -89,7 +89,7 @@ width: 100%;
 				<input class="form-control mr-sm-2" type="search"
 					placeholder="Search" aria-label="Search">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				<button class="btn btn-outline-primary my-2 my-sm-0 btn-logout" type="submit"><a href="Home.jsp">Logout</a></button>
+				<a class="btn btn-outline-primary my-2 my-sm-0 btn-logout" href="index.jsp">Logout</a>
 			</form>
 			
 		</div>

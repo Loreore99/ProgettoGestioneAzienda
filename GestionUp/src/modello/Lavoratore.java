@@ -2,6 +2,7 @@ package modello;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -30,7 +31,7 @@ public class Lavoratore extends Utenza{
 	@ManyToMany
 	private List<Progetto> progetti;
 	
-	@OneToMany(mappedBy = "lav")
+	@OneToMany(mappedBy = "lav", cascade=CascadeType.ALL)
 	private List <RegistroOre> registri;
 	
 	
