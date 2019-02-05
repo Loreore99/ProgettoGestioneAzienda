@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import modello.Lavoratore;
 import modello.Progetto;
 import modello.RegistroOre;
 import utility.EntityManagerProvider;
@@ -28,6 +29,8 @@ public class RegistroOreManager {
 		registro.setOraInizio(data);
 		
 		EntityManager em = EntityManagerProvider.getEntityManager();
+		Lavoratore l = em.find(Lavoratore.class, registro.getLav().getUsername());
+		registro.setLav(l);
 		em.getTransaction().begin();
 		em.persist(registro);
 		em.getTransaction().commit();

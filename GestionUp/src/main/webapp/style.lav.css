@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 150px;
+    z-index: 1;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+
+}
+
+
+.logo img {
+    height: 100px;
+    width: 230px;
+}  
+
+.login  {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 18px;
+}  
+
+.login img {
+    height: 110px;
+    width: 100px;
+}  
+.login img:hover {
+    height: 120px;
+    width: 110px;
+
+}  
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding-top: 100px;
+    align-items: flex-start;
+
+}
+
+.nav-links li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #070f0e;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.nav-links a:hover{
+    color: #7fffbb;
+    font-size: 18px;
+
+}
+.nav-links a:active{
+    color: #7fffbb;
+    font-size: 18px;
+
+}
+
+  
+.burger{
+    display: none;
+    cursor: pointer;
+    
+}
+
+.burger div{
+width: 25px;
+height: 3px;
+background-color: #070f0e;
+margin: 5px;
+transition: all 0.3s ease ;
+}
+
+.page{
+    z-index: -1;
+}
+
+
+.sidenav-links {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    top: 150px;
+    background-color:#070f0e;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    width: 25%;
+    font-family: 'Poppins', sans-serif; 
+    
+}
+
+.sidenav-links li{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.sidenav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidenav-links a:hover{
+    color: #070f0e;
+    background-color: #7fffbb;
+    font-size: 18px;
+}
+
+.sidenav-links a:active{
+    color: #070f0e;
+    background-color: #7fffbb;
+    font-size: 18px;
+}
+
+.resp-links1,
+.resp-links2, 
+.resp-links3 {
+    display: none;
+}
+
+.content{
+    
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
+  
+    top: 150px;
+    flex-direction: column;
+    align-items: center ;
+    width: 75%;
+    font-family: 'Poppins', sans-serif; 
+    padding: 0px;
+}
+
+.resp-links1 {
+    position: absolute;
+        left: 0px;
+        height: 100%;
+        top: 150px;
+        background-color:#070f0e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%; 
+}    
+
+
+.resp-links1 a {
+    color: white;
+}
+
+.resp-links1 li{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 1124px) {
+    
+    body{
+         overflow-x: hidden;
+    }
+    
+    .login  {
+        display:none;
+    }  
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        top: 150px;
+        background-color:#070f0e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%; 
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in; 
+        padding-top:0px;
+        
+    }
+
+    .nav-links li{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .nav-links a{
+        color:white;
+    }
+
+    .burger{
+        display: block;
+             
+    }
+    .resp-links1, 
+    .resp-links2, 
+    .resp-links3 {
+         display: block;
+         background-color: #8de8d5;
+         
+         
+    }
+    
+    .resp-links1 a, 
+    .resp-links2 a, 
+    .resp-links3 a{
+        color: #070f0e;
+    }
+
+    .resp-links1 a:hover, 
+    .resp-links2 a:hover, 
+    .resp-links3 a:hover{
+        color: #070f0e;
+        background-color: #7fffbb;
+    }
+
+    .resp-links1 a:active, 
+    .resp-links2 a:active, 
+    .resp-links3 a:active{
+        color: #070f0e;
+        background-color: #7fffbb;
+    }
+
+    .sidenav-links {
+        display: none;
+
+        
+    }
+    .content{
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%)
+}
+
+
+@keyframes navLinkFade {
+    from {
+        color: white;
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+
+    to{
+        color: white;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.toggle .line1 {
+     transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+    
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+/* home tabella*/
+.tab-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height:100%;
+    width: 100%;
+    padding: 20px;
+    
+    background-color: #d7e0de;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+
+}
+table {
+    
+    border-collapse: collapse;
+    width: 60%;
+    border: #070f0e;
+    
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 10px;
+    
+  }
+  
+  
+
+
+
+  /* orologio */
+ .content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+ } 
+  
+.orologio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #070f0e;
+    font-size: 30px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    background-color: #8de8d5;
+    height: 150px;
+    width: 100%;
+
+
+}
+  
+.color1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+   
+}
+
+.btn-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #070f0e;
+    font-size: 30px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    background-color: #d7e0de;
+    height: 150px;
+    width: 100%;
+    
+  
+}
+.btn-home div{
+    width: 30px;
+}
+.btn-home button{
+    background-color: #ffe100;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    height: 50px;
+    width: 250px;
+    border:none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 22px;
+
+    
+}
+
+.color2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-weight: bold;
+    
+   
+}
+.btn-homebot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #070f0e;
+    font-size: 30px;
+    height: 150px;
+    width: 100%;
+   
+    
+}
+.btn-homebot div{
+    width: 30px;
+}
+.btn-homebot button{
+    background-color: #8de8d5;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+ 
+    
+}
+
+
+
+.outer {
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .outer .chart-container {
+    width: 300px;
+    float: left;
+    height: 200px;
+  }
+  .highcharts-yaxis-grid .highcharts-grid-line {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .outer {
+      width: 100%;
+      height: 400px;
+    }
+    .outer .chart-container {
+      width: 300px;
+      float: none;
+      margin: 0 auto;
+    }
+  
+  }
+
+
+  /* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 200px;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    width: 700px; /* Could be more or less, depending on screen size */
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgcontainer {
+      display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgcontainer img{
+    width: 60%;
+    height: 60%;
+    align-items: center;
+  }
+   .container{
+       background-color: #d7e0de;
+       flex-direction: column;
+       display: flex;
+       justify-content: center;
+       width: 100%;
+       height: 100%;
+       align-items: center;
+       font-family: 'Poppins', sans-serif;
+
+   }
+
+   .container1{
+    background-color: #d7e0de;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+
+}
+.container1 span,
+.container1 label {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 5px;
+
+
+}
+
+.container1 input {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.container1 button {
+    font-size: 20px;
+    padding: 5px;
+    background-color: #8de8d5;
+    box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.container1 div {
+    padding-top: 10px;
+}
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }

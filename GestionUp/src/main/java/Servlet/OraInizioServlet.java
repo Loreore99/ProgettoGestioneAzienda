@@ -38,7 +38,7 @@ public class OraInizioServlet extends HttpServlet {
 		lav.setUsername(request.getParameter("username"));
 		registro.setLav(lav);
 		RegistroOreManager.Inizio(registro);
-		
+		response.sendRedirect("HomeLavoratore.jsp");
 	}
 
 }

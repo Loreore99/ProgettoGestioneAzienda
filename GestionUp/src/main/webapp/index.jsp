@@ -233,16 +233,107 @@ Clockify è completamente gratuito, indipendentemente dal numero di dipendenti ch
                 </div>
         
         </div>
-    
-        <div class='footer'>
-       
-      </form> 
+        <div class='color4' id="iscriviti">
+
+           
+         <button onclick="document.getElementById('id02').style.display='block'">
+                <img src="ICONA ISCR1.png" class='iscrizione'>
+         </button>
+        
+        <div id="id02" class="modal">
+                    
+                    <div class='BOTTONI'>
+                        <button  onclick="document.getElementById('id03').style.display='block'">
+                                <img src="porcellino.png"class="login">AZIENDA</button>
+                        <button  onclick="document.getElementById('id04').style.display='block'" >
+                                <img src="porcellino.png"class="login">CLIENTE</button>
+                    </div>
+        </div>
 
 
+         <div id="id03" class="modal">
+                    <form clas='modal-content animate' action="/action_page.php">
+                <div class="container">
+                <div class='container1'>
+                        
+                    <label for="Stato P.IVA"><b>Stato P.IVA</b></label>
+                <input type="text" name="Stato P.IVA" value="Italia"><br>
+                <label for="P.IVA"><b>P.IVA</b></label>
+                <input type="text" name="P.IVA" ><br><br>
+                <label for="Nome Azienda"><b>Nome Azienda</b></label>
+                <input type="text" name="Nome Azienda" value="gestion.up.sas"><br>
+                <label for="Settore"><b>Settore</b></label>
+                <input type="text" name="Settore" value="Progettazione"><br>
+                <label for="Referente"><b>Referente</b></label>
+                <input type="text" name="Referente" value="Mario Rossi"><br>
+                <label for="Stato"><b>Stato</b></label>
+                <input type="text" name="Stato" value="Italia"><br>
+                <label for="Provincia"><b>Provincia</b></label>
+                <input type="text" name="Provincia" value="MI"><br>
+                <label for="Città"><b>Città</b></label>
+                <input type="text" name="Città" value="Milano"><br>
+                <label for="Indirizzo"><b>Indirizzo</b></label>
+                <input type="text" name="Indirizzo" value="Via B. Crespi"><br>
+                <label for="CAP"><b>CAP</b></label>
+                <input type="text" name="CAP" value="20159"><br>
+                <label for="Telefono"><b>Telefono</b></label>
+                <input type="text" name="Telefono" value="02 36680400"><br>
+                <label for="E-Mail"><b>E-Mail</b></label>
+                <input type="text" name="E-Mail" value="itsar@itsrizzoli.it"><br>
+                <label for="Sito Web"><b>Sito Web</b></label>
+                <input type="text" name="Sito Web" value="www.itsrizzoli.it"><br>
+                <div><button type="Iscriviti">ISCRIVITI</button></div>
+            
+               <div><button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">ESCI</button></div>
+            </div>
+               </div>
+            </form>
+       </div>
+               
+
+       <div id="id04" class="modal">
+            <form clas='modal-content animate' action="/action_page.php">
+                <div class="container">
+                <div class='container1'>
+                        
+                    <label for="NOME"><b>Nome</b></label>
+                <input type="text" name="nome" value="Mario"><br>
+                <label for="Cognome"><b>Cognome</b></label>
+                <input type="text" name="Cognome" value="Rossi" ><br><br>
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">M</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">F</label>
+                      </div>
+                <label for="Stato"><b>Stato</b></label>
+                <input type="text" name="Stato" value="Italia"><br>
+                <label for="Provincia"><b>Provincia</b></label>
+                <input type="text" name="Provincia" value="MI"><br>
+                <label for="Città"><b>Città</b></label>
+                <input type="text" name="Città" value="Milano"><br>
+                <label for="Indirizzo"><b>Indirizzo</b></label>
+                <input type="text" name="Indirizzo" value="Via B. Crespi"><br>
+                <label for="CAP"><b>CAP</b></label>
+                <input type="text" name="CAP" value="20159"><br>
+                <label for="Telefono"><b>Telefono</b></label>
+                <input type="text" name="Telefono" value="02 36680400"><br>
+                <label for="E-Mail"><b>E-Mail</b></label>
+                <input type="text" name="E-Mail" value="itsar@itsrizzoli.it"><br>
+                
+                <div><button type="Iscriviti">ISCRIVITI</button></div>
+            
+               <div><button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">ESCI</button></div>
+            </div>
+               </div>
+            </form>
+       </div>
+        </div>
+       <div class='footer' >
 
         </div>
-        
- 
         
    
 </body>
