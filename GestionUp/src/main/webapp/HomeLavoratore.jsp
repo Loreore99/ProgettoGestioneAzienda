@@ -1,148 +1,130 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<script type="text/javascript">
-		function startTime()
-		{
-		var today=new Date();
-		var h=today.getHours();
-		var m=today.getMinutes();
-		var s=today.getSeconds();
-		// add a zero in front of numbers<10
-		
-		m=checkTime(m);
-		s=checkTime(s);
-		document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-		t=setTimeout('startTime()',500);
-		}
-		function checkTime(i)
-		{
-		if (i<10)
-		{
-		i="0" + i;
-		}
-		return i;
-		}
-		
-		</script>
-<style>
-body{
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-background-size: contain;
-position: absolute;
-height: 100%;
-width: 100%;
-}
-.centrato {
-	text-align: center;
-	font-family: arial;
-}
-
-.btn-logout {
-	margin-left: 15px;
-	color: white!important;
-}
-</style>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-<meta charset="ISO-8859-1">
-<title>Home</title>
+    <link rel='stylesheet' href='style.lav.css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <meta charset="ISO-8859-1">
+    <title>Gestion Up Home Lavoratore</title>
+   
 </head>
-<body background="sfondo.PNG" onload="startTime()">
+<header>
+    <nav >
+        
+        <div class="logo">
+            <img src="logo.png" class="logo">
+        </div>
+        
+        <ul class="nav-links" >
+            <li>
+                <a href="#home">Home</a>
+                <ul class="resp-links2 " >
+                        <li>
+                            <a href="#">Orari</a>
+                        </li>
+                        <li>
+                            <a href="#" >Modifica Orari</a>
+                        </li>
+                        <li>
+                            <a href="#" >Malattia</a>
+                        </li>
+                        <li>
+                            <a href="#" >Report</a>
+                        </li>
+                        
+                    </ul>
+            </li>
+                
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand"><img src = "sfondo.PNG" height="50px" width="85px"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<!-- menu a tendina che spunta quando rimpicciolisco lo schermo -->
+            <li>
+                <a href="#" >Progetti</a>
+                <ul class="resp-links2 " >
+                        <li>
+                            <a href="#">Progetto</a>
+                        </li>
+                        <li>
+                            <a href="#" >Feedback</a>
+                        </li>
+                        <li>
+                            <a href="#" >Chat</a>
+                        </li>
+                        <li>
+                            <a href="#" >Avvisi Modifiche </a>
+                       </li>
+                        <li>
+                              <a href="#" >Rimborsi</a>
+                         </li>
+                        
+                    </ul>
+            </li>
+            <li>
+                <a href="#" >Calendario</a>
+                    <ul class="resp-links3 " >
+                            
+                        </ul>
+            </li>
+            <li>
+                    <a onclick="document.getElementById('id04').style.display='block'" >Messaggi</a>
+                        <ul class="resp-links3 " >
+                                
+                                
+                            </ul>
+                </li>
+               
+        </ul>
+        
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link">Home</a></li>
+          <div class="login">
+            <img src="porcellino.png"class="login">PROFILO
+        </div>
+        
+    </nav>
+    
 
-				<li class="nav-item"><a class="nav-link dropdown-toggle"
-					href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false"> Info ore lavorative </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Visualizza ore lavorate</a>
-					    <a class="dropdown-item" href="#">Visualizza permessi</a> 
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Visualizza ferie</a>
-					</div></li>
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Richieste dai clienti </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="VisualizzaRichieste.jsp">Visualizza richieste</a> <a
-							class="dropdown-item" href="">Visualizza dati cliente</a>
-					</div></li>
-				
-				
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Sviluppo progetti  </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Cambia lo stato del progetto</a>
-						<a class="dropdown-item" href="#">Dai feedback al cliente</a> <a
-							class="dropdown-item" href="#">Consegna progetto</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Chat con il cliente</a>
-						<a class="dropdown-item" href="#">Visualizza pagamento</a>
-					</div></li>
-					
-					<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> Info profilo </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="http://localhost:8080/GestionUp/EliminaProfilo.jsp">Elimina profilo</a> <a
-							class="dropdown-item" href="http://localhost:8080/GestionUp/ModificaProfilo.jsp">Modifica dati personali</a>
-					</div></li>
 
-				<li class="nav-item active"><a class="nav-link"
-					href="#">Info
-						lavoratore <span class="sr-only">(current)</span>
-				</a></li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				<button class="btn btn-outline-primary my-2 my-sm-0 btn-logout" type="submit"><a href="Sito.jsp">Logout</a></button>
-			</form>
-			
-		</div>
-	</nav>
-	
-	<!--  per il menu a tendina  -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-		crossorigin="anonymous"></script>
-		<br><br>
-		
-		<!-- form di inizio lavoro -->
+</header>
+
+<body onload=display_ct();>
+        <div class='page' id='home'>
+                <ul class="sidenav-links " >
+                        <li>
+                            <a href="#home">Orari</a>
+                        </li>
+                        <li>
+                                
+                            <a onclick="document.getElementById('id01').style.display='block'" >Modifica Orari</a>
+                        </li>
+                        <li>
+                            <a onclick="document.getElementById('id02').style.display='block'" >Malattia</a>
+                        </li>
+                        <li>
+                            <a onclick="document.getElementById('id03').style.display='block'" >Report</a>
+                        </li>
+                    </ul>
+                
+               
+
+                    <div class='content'>
+
+                            <div class='orologio' >
+                                    <span id='ct' ></span>
+                            </div>
+                                    
+                         <div class='color1'>
+
+                         </div>
+
+
+
+                 
+		 
+		 
 		<form class = "centrato" method="get"  action="inizio">
 		<h8> Inserisci il tuo username e clicca su "Inizio lavoro" per iniziare a lavorare</h8>
 		<br>
@@ -167,13 +149,82 @@ width: 100%;
 		
 		<p class = "centrato"> Ore correnti: </p>
 		  <p class = "centrato" id="txt"></p>
-		
-	
-	
-	
 
-		
-		
+                        
 
+                        
+                        <div class='tab-home'>
+                                <table>
+                                        <tr>
+                                          <th>Ora Inizio</th>
+                                          <th>Ora Fine</th>
+                                          <th>Totale </th>
+                                        </tr>
+                                        <tr>
+                                          <td>Alfreds Futterkiste</td>
+                                          <td>Maria Anders</td>
+                                          <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Centro comercial Moctezuma</td>
+                                          <td>Francisco Chang</td>
+                                          <td>Mexico</td>
+                                        </tr>
+                              </table>
+                        </div>
+                        
+                        <div class='color2'>
+                            
+
+                        <div class='btn-homebot'>
+                                <button class='inizia'>SETTIMANA</button>
+                                <div></div>
+                                <button class='finisci'>MESE</button>
+                              </div>
+                        </div>
+        
+                    </div>
+        </div>
+
+
+        <div id="id01" class="modal">
+           
+    
+
+               <img src="modifica orari.png" width=100% height=200%>
+<!--
+                        <script src="https://code.highcharts.com/highcharts.js"></script>
+                        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+                        
+                        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+                        
+                        <div class="outer">
+                          <div id="container-speed" class="chart-container"></div>
+                          <div id="container-rpm" class="chart-container"></div>
+                        </div>
+        
+                </div> -->
+            </div>
+            <div id="id02" class="modal">
+           
+    
+
+               <img src="malattia.png" width=100% height=200%>
+               </div>
+               <div id="id03" class="modal">
+           
+    
+
+               <img src="report.png" width=100% height=200%>
+               </div>
+               <div id="id04" class="modal">
+           
+    
+
+               <img src="chat.png" width=100% height=200%>
+               </div>
+   
 </body>
+<script src="app.lav.js"></script>
+
 </html>
