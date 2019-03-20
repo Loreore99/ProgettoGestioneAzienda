@@ -40,7 +40,7 @@ public class Azienda extends Utenza {
 	}
 
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		this.tipo = tipo;//hgg
 	}
 
 	public Double getCapitale() {
